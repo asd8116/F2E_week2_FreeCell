@@ -1,12 +1,32 @@
 <template>
   <div id="app">
-    <h1>fvz</h1>
+    <Header />
   </div>
 </template>
 
 <script>
-export default {}
+import Header from '@/components/Header.vue'
+
+export default {
+  data() {
+    return {
+      pokeCards: [
+        {
+          id: 0,
+          number: 1,
+          color: 'pitch'
+        }
+      ]
+    }
+  },
+  components: {
+    Header
+  }
+}
 </script>
 
 <style lang="scss">
+#app {
+  width: 100%;
+}
 </style>
