@@ -1,0 +1,40 @@
+<template>
+  <transition name="fadeOut">
+    <div class="loading-page" v-if="showPage">
+      <div class="center-block">
+        <div class="logo"></div>
+      </div>
+    </div>
+  </transition>
+</template>
+
+<script>
+export default {
+  props: ['showPage']
+}
+</script>
+
+<style lang="scss" scoped>
+.loading-page {
+  width: 100%;
+  height: 100%;
+  background: rgb(82, 82, 82);
+  background: linear-gradient(180deg, rgba(82, 82, 82, 1) 0%, rgba(0, 31, 29, 1) 100%);
+  .center-block {
+    width: 650px;
+    height: 290px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .logo {
+      width: 100%;
+      height: 100%;
+      background-image: url('../assets/image/logo.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+}
+</style>
