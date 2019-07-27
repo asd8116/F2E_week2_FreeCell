@@ -1,6 +1,7 @@
 // flip
 .fadeOut-leave-active {
-  animation: fadeOut 2.5s ease-in-out;
+  animation: fadeOut 1.5s ease-in-out;
+  animation-delay: 1s;
 }
 
 @keyframes fadeOut {

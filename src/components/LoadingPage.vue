@@ -12,10 +12,14 @@ export default {}
 
 <style lang="scss" scoped>
 .loading-page {
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   background: rgb(82, 82, 82);
   background: linear-gradient(180deg, rgba(82, 82, 82, 1) 0%, rgba(0, 31, 29, 1) 100%);
+  z-index: 100;
   .center-block {
     width: 650px;
     height: 290px;
@@ -26,7 +30,7 @@ export default {}
     .logo {
       width: 100%;
       height: 100%;
-      background-image: url('../assets/image/logo.png');
+      background-image: url('../assets/image/logo.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
