@@ -2,15 +2,21 @@
   <div class="target_slot_panel">
     <div class="target-slot" v-for="(slot, index) in targetSlots" :key="index">
       <div class="inner-block">A</div>
+      <PokeCard v-for="card in slot.cards" :key="card.id" :cardData="card" />
     </div>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import PokeCard from '@/components/PokeCard.vue'
+
 export default {
   computed: {
     ...mapState(['targetSlots'])
+  },
+  components: {
+    PokeCard
   }
 }
 </script>
