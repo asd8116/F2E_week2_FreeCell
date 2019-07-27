@@ -1,12 +1,21 @@
 <template>
   <div id="app">
-    <LoadingPage :showPage="showLoading" />
+    <transition name="fadeOut">
+      <LoadingPage v-if="showLoading" />
+    </transition>
+    <div class="main">
+      <Header />
+    </div>
+    <div class="slide">
+      <RightToolsBar />
+    </div>
   </div>
 </template>
 
 <script>
 import LoadingPage from '@/components/LoadingPage.vue'
-import { setTimeout } from 'timers'
+import RightToolsBar from '@/components/RightToolsBar.vue'
+import Header from '@/components/Header.vue'
 
 export default {
   data() {
@@ -22,12 +31,14 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
-      this.showLoading = false
-    })
+    // setTimeout(() => {
+    //   this.showLoading = false
+    // })
   },
   components: {
-    LoadingPage
+    Header,
+    LoadingPage,
+    RightToolsBar
   }
 }
 </script>
@@ -38,5 +49,17 @@ export default {
   height: 100%;
   background: rgb(82, 82, 82);
   background: linear-gradient(180deg, rgba(82, 82, 82, 1) 0%, rgba(0, 31, 29, 1) 100%);
+  display: flex;
+  .main {
+    width: calc(100% - 105px);
+    height: 100%;
+    padding: 0 2.5rem;
+  }
+  .slide {
+    z-index: 2;
+    background-color: #001f1d;
+    width: 105px;
+    height: 100%;
+  }
 }
 </style>

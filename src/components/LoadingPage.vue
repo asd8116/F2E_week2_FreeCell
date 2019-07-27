@@ -1,17 +1,13 @@
 <template>
-  <transition name="fadeOut">
-    <div class="loading-page" v-if="showPage">
-      <div class="center-block">
-        <div class="logo"></div>
-      </div>
+  <div class="loading-page">
+    <div class="center-block">
+      <div class="logo"></div>
     </div>
-  </transition>
+  </div>
 </template>
 
 <script>
-export default {
-  props: ['showPage']
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
@@ -30,7 +26,7 @@ export default {
     .logo {
       width: 100%;
       height: 100%;
-      background-image: url('../assets/image/logo.svg');
+      background-image: url('../assets/image/logo.png');
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
