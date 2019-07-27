@@ -27,10 +27,12 @@ export default {}
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: zoomToLeftTop 1.6s ease-in-out;
+    animation-delay: 1s;
     .logo {
       width: 100%;
       height: 100%;
-      background-image: url('../assets/image/logo.svg');
+      background-image: url('../assets/image/logo2x.png');
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;

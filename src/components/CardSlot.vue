@@ -23,7 +23,8 @@ export default {
   .card_slot {
     width: 110px;
     height: 160px;
-    border: 1px solid white;
+    border: 1px dotted rgba(white, 0.2);
+    border-radius: 5px;
   }
 }
 </style>

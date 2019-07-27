@@ -13,3 +13,17 @@
     opacity: 0;
   }
 }
+
+@keyframes zoomToLeftTop {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    top: 55px;
+    left: 130px;
+    transform: translate(-50%, -50%) scale(0.35);
+  }
+}
